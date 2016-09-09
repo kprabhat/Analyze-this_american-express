@@ -1,0 +1,19 @@
+* mvar_27 != ( mvar_23 + mvar_24 + mvar_25 + mvar_26 + mvar_28 )
+* High donation, 0 primary income, also donation and income - very low correlation
+* Most important feature => mvar_1 ( Party voted for in previous elections )
+* Normalisation reduced accuracy slightly
+* Filling NA not required but filling 0's gave better accuracy
+* average houshold size, number of political affiliations - should not be ordered/factor
+* CrossVal results - 0.808
+	* mvar_1 alone - 0.79
+	* No other feature gives more than 0.48 alone
+	* Most give around 0.35
+	* Removing rows with mvar_27 != total rallies - 0.82
+	* Number of rallies - 0.68
+	* Random Forest with # of rallies only - 0.8445275
+	* Random Forest with selected features - 0.8486025
+* mvar_12 has new levels 'Factory Manager', 'Middle Management', 'Senior Management' in Leaderboard Data
+* 1115 past CENTAUR votes converted to TOKUGAWA
+* Neural Network
+	* Best result with 10 hidden layers and max 250 iterations
+	* Overfitting with 20 hidden layers and max 350 iterations
